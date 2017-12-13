@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="McDonald's Menu Data, Mcky D's Data, McDonald's menu facts, McD menu">
+    <meta name="author" content="">
+
+    <title>McDonald's Menu Data</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/one-page-wonder.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <h2>Welcome!</h2>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" id="top">Top
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+            
+              <li class="nav-item">
+                <a class="nav-link" id ="intro-click">Intro</a>
+              </li>
+            
+              <li class="nav-item">
+                <a class="nav-link" id="charts-click">Charts</a>
+              </li>
+            <!--
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <header class="masthead">
+      <div class="overlay">
+        <div class="container">
+          <h1 class="display-1 text-white" style="
+          text-shadow: 2px 2px 2px black; ">McDonald's Menu Data</h1>
+          <h2 class="display-4 text-white" style="
+          text-shadow: 2px 2px 2px black;">McHelping You Get Informed </h2>
+        </div>
+      </div>
+    </header>
+<!-- Intro to webpage -->
+    <section id="introduction">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 order-2">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="https://vignette.wikia.nocookie.net/mugen/images/b/b0/Donald_McDonald.png/revision/latest?cb=20170910183419" alt="Ronald">
+            </div>
+          </div>
+          <div class="col-md-6 order-1">
+            <div class="p-5">
+              <h2 class="display-4">Our Mission!</h2>
+              <p>Our goal is to present our visitors with enough information on the food they consume from their favorite restuarant!
+              The data is pulled from "url" gathered since "year" and its initial intent was to document all nutrition info of McDonald's menu items. 
+              We believe this information can help in various situations such as measuring calorie consumption, carb consumption, serving size, etc.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- WHERE TABLE GOES -->
+    <section>
+        <div class="container">
+          <div class="row align-items-center">
+              <!-- Table code goes here, if no table then just delete everything in here from comments WHERE TABLE GOES or leave it -->
+          </div>
+        </div>
+      </section>
+<!-- WHERE TABLE GOES -->
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="fix-size">
+                    <canvas id="myDoughnutChart" class="mySlides" alt="Doughnut Chart"></canvas>
+                    <canvas id="myChart2" class="mySlides" width="150" height="150"></canvas>
+                    <canvas id="myChart3" class="mySlides" width="150" height="150"></canvas>
+
+                    <button  class="left-button" onclick="plusDivs(-1)">&#10094;</button>
+                    <button  class="right-button" onclick="plusDivs(1)">&#10095;</button>
+                </div>
+            </div>
+            <!-- Description -->
+            <div class="col-md-6">
+                <div class="fix-size">
+                  <h2 class="display-4">Charts</h2>
+                  <p>*There was multiple items with the same count or with zero in which case we used the lowest with calories.
+                    <br />
+                    <ul>
+                      <li>
+                          The first chart is a doughnut chart which displays the total amount of calories on the McDonald's menu,
+                          based on 6 categories: Breakfast, Lunch, Salads, Sides, Desserts, and Drinks.
+                      </li>
+                      <br />
+                      <li>
+                          Our second chart (Bar chart) displays the menu item with the most calories in each category.
+                      </li>
+                      <br />
+                      <li>
+                          Finally, the third horizontal bar chart displays the menu item with the least amount of calories for each section.
+                      </li>
+                    </ul>
+                      
+                  </p>
+                </div>
+            </div>
+
+        </div>
+      </div>
+    </section>
+
+<!-- IGNORE THIS
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 order-2">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="https://unsplash.it/500/500?image=453" alt="">
+            </div>
+          </div>
+          <div class="col-md-6 order-1">
+            <div class="p-5">
+              <h2 class="display-4">Let there be rock!</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  -->
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Nugget Society 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    
+
+<!-- JS for smooth scrolling -->
+    <script>
+      //smooth scroll to Top
+    $("#top").click(function() {
+      $('html, body').animate({
+        scrollTop: 0
+        }, 700);
+        return false;
+    });
+      //smooth scroll to Intro
+    $("#intro-click").click(function() {
+      $('html, body').animate({
+        scrollTop: 500
+        }, 700);
+    });
+      //smooth scroll to Charts
+    $("#charts-click").click(function() {
+      $('html, body').animate({
+        scrollTop: 980
+        }, 700);
+    });
+
+    </script>
+
+<!-- JS for charts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script>
+    // CHART 1
+    var ctx = document.getElementById("myDoughnutChart");
+    var myDoughnutChart = new Chart(ctx, {
+        type: 'doughnut',
+        data : {
+        labels: [
+            'Breakfast',
+            'Lunch',
+            'Salads',
+        'Sides',
+        'Desserts',
+        'Drinks'
+        ],
+        datasets: [{
+          label: '*Total calories of each group ',
+          data: [22120, 22340, 1620, 3195, 6325, 40150],
+          backgroundColor: [
+                    'rgba(255, 99, 132, 0.8)',
+                    'rgba(54, 162, 235, 0.8)',
+                    'rgba(255, 206, 86, 0.8)',
+                    'rgba(75, 192, 192, 0.8)',
+                    'rgba(153, 102, 255, 0.8)',
+                    'rgba(255, 159, 64, 0.8)'
+                ],	
+        }]
+        
+    },
+
+    });
+    // CHART 2
+    var ctx2 = document.getElementById("myChart2");
+    var myChart2 = new Chart(ctx2, {
+        type: 'bar',
+        data: {
+            labels: ['Big Breakfast with Hotcakes (Large Biscuit)', 'Chicken McNuggets (40 piece)', 'Premium Southwest Salad with Crispy Chicken', 'Large French Fries', 'McFlurry with M&M™s Candies (Medium)', 'Chocolate Shake (Large)'],
+            datasets: [{
+                label: '*Highest Calorie Item For Each Category',
+                data: [1150, 1880, 450, 510, 930, 850],
+                backgroundColor: [
+                    'rgba(154, 62, 135, 0.8)',
+                    'rgba(220, 20, 60, 0.8)',
+                    'rgba(55, 106, 186, 0.8)',
+                    'rgba(175, 92, 192, 0.8)',
+                    'rgba(200, 192, 155, 0.8)',
+                    'rgba(164, 255, 164, 0.8)'
+                ],
+                borderColor: [
+                    'rgba(164,99,132,1)',
+                    'rgba(154, 62, 135, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(175, 92, 92, 1)',
+                    'rgba(153, 102, 164, 1)',
+                    'rgba(164, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
+            }
+        }
+    });
+    // CHART 3
+    var ctx3 = document.getElementById("myChart3");
+    var myChart2 = new Chart(ctx3, {
+        type: 'horizontalBar',
+        data: {
+            labels: ["Hash Brown", "Chicken McNuggets (4 piece)", "Premium Bacon Ranch Salad (without Chicken)", "Apple Slices", "Kids Ice Cream Cone", "Minute Maid 100% Apple Juice Box"],
+            datasets: [{
+              label: '*Lowest Calorie Item For Each Category',
+                data: [150, 190, 140, 15, 45, 80],
+                backgroundColor: [
+                    'rgba(0, 99, 150, 0.8)',
+                    'rgba(14, 162, 135, 0.8)',
+                    'rgba(220, 20, 60, 0.8)',
+                    'rgba(175, 92, 12, 0.8)',
+                    'rgba(20, 192, 155, 0.8)',
+                    'rgba(164, 25, 164, 0.8)'
+                ],
+                borderColor: [
+                    'rgba(64,99,132,1)',
+                    'rgba(154, 162, 15, 1)',
+                    'rgba(55, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(253, 12, 164, 1)',
+                    'rgba(104, 59, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
+            }
+        }
+    });
+    </script>
+
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+      
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+      
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+      }
+      </script>
+
+  </body>
+
+</html>

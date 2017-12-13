@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Macdons Stuff</title>
+    <style>
+        table, th, td 
+        {
+            margin:10px 0;
+            border:solid 1px #333;
+            padding:2px 4px;
+            font:15px Verdana;
+        }
+        th {
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" onclick="macdonsTable()" value="Create Table." />
+	<input type="button" onclick="macdonCals()" value="Sort by calories"/>
+	<input type="button" onclick="macdonSodium()" value="Sort by Sodium"/>
+	<input type="button" onclick="macdonCategory()" value="Sort by Category"/>
+	<input type="button" onclick="macdonItem()" value="Sort by Item"/>
+    <div id="showData"></div>
+		
+</body>
+
+<script>
+function macData();{	
+	var macdons = 
+	[
+	
+	{ 
+		"Category": "Smoothies & Shakes",
+	   "Item": "McFlurry with Oreo Cookies (Small)",
+	   "Serving Size": "10.1 oz (285 g)",
+	   "Calories": 510,
+	   "Total Fat": 17,
+	   "Cholesterol": 45,
+	   "Sodium": 280,
+	   "Carbohydrates": 80,
+	   "Sugars": 64,
+	   "Protein": 12
+	 },
+	 {
+	   "Category": "Smoothies & Shakes",
+	   "Item": "McFlurry with Oreo Cookies (Medium)",
+	   "Serving Size": "13.4 oz (381 g)",
+	   "Calories": 690,
+	   "Total Fat": 23,
+	   "Cholesterol": 55,
+	   "Sodium": 380,
+	   "Carbohydrates": 106,
+	   "Sugars": 85,
+	   "Protein": 15
+	 },
+	 {
+	   "Category": "Smoothies & Shakes",
+	   "Item": "McFlurry with Oreo Cookies (Snack)",
+	   "Serving Size": "6.7 oz (190 g)",
+	   "Calories": 340,
+	   "Total Fat": 11,
+	   "Cholesterol": 30,
+	   "Sodium": 190,
+	   "Carbohydrates": 53,
+	   "Sugars": 43,
+	   "Protein": 8
+	 },
+	 {
+	   "Category": "Smoothies & Shakes",
+	   "Item": "McFlurry with Reese's Peanut Butter Cups (Medium)",
+	   "Serving Size": "14.2 oz (403 g)",
+	   "Calories": 810,
+	   "Total Fat": 32,
+	   "Cholesterol": 60,
+	   "Sodium": 400,
+	   "Carbohydrates": 114,
+	   "Sugars": 103,
+	   "Protein": 21
+	 },
+	 {
+	   "Category": "Smoothies & Shakes",
+	   "Item": "McFlurry with Reese's Peanut Butter Cups (Snack)",
+	   "Serving Size": "7.1 oz (202 g)",
+	   "Calories": 410,
+	   "Total Fat": 16,
+	   "Cholesterol": 30,
+	   "Sodium": 200,
+	   "Carbohydrates": 57,
+	   "Sugars": 51,
+	   "Protein": 10
+	 }
+	]
+	}
+function macdonCategory();{	
+		macData();
+		var sorted = macdons.sort(function sorting(a, b)
+		document.getElementById("showData").innerHTML = macdons;
+		//{
+		//return b.Category < a.Category ? 1 : b.Category > a.Category ? -1 : 0;
+		}
+function macdonCals();{	
+		macData();
+		var sorted = macdons.sort(function sorting(a, b)
+		{
+		return b.Calories < a.Calories ? 1 : b.Calories > a.Calories ? -1 : 0;
+		}}
+function macdonSodium();{	
+		macData();
+		var sorted = macdons.sort(function sorting(a, b)
+		{
+		return b.Sodium < a.Sodium ? 1 : b.Sodium > a.Sodium ? -1 : 0;
+		}}
+function macdonItem();{
+		macData();
+		var sorted = macdons.sort(function sorting(a, b)
+		{
+		return b.Item < a.Item ? 1 : b.Item > a.Item ? -1 : 0;
+		}}
+function macdonsTable() {
+		macData();
+		var col = [];
+			
+			for (var i = 0; i < macdons.length; i++) {
+				for (var key in macdons[i]) {
+					if (col.indexOf(key) === -1) {
+						col.push(key);
+					}
+				}
+			}
+
+			var table = document.createElement("table");
+
+			var tr = table.insertRow(-1);                   
+
+			for (var i = 0; i < col.length; i++) {
+				var th = document.createElement("th");      
+				th.innerHTML = col[i];
+				tr.appendChild(th);
+			}
+]
+			for (var i = 0; i < macdons.length; i++) {
+
+				tr = table.insertRow(-1);
+
+				for (var j = 0; j < col.length; j++) {
+					var tabCell = tr.insertCell(-1);
+					tabCell.innerHTML = macdons[i][col[j]];
+				}
+			}
+
+			var divContainer = document.getElementById("showData");
+			divContainer.innerHTML = "";
+			divContainer.appendChild(table);
+		}
+
+</script>
+</html>
